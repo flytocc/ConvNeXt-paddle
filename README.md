@@ -207,7 +207,7 @@ pip3 install ./dist/auto_log-1.2.0-py3-none-any.whl
 ```bash
 bash test_tipc/prepare.sh test_tipc/config/ConvNeXt/convnext_tiny.txt 'lite_train_lite_infer'
 
-bash test_tipc/test_train_inference_python.sh test_tipc/config/ConvNeXt/convnext_tiny.txtt 'lite_train_lite_infer'
+bash test_tipc/test_train_inference_python.sh test_tipc/config/ConvNeXt/convnext_tiny.txt 'lite_train_lite_infer'
 ```
 TIPC结果：
 
