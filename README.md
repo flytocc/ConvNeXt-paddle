@@ -136,7 +136,6 @@ python eval.py \
     --model convnext_tiny \
     --batch_size 128 \
     --data_path /path/to/imagenet/ \
-    --dist_eval \
     --resume $TRAINED_MODEL
 ```
 
