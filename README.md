@@ -132,9 +132,7 @@ python -m paddle.distributed.launch --gpus="0,1,2,3" \
 ### 4.2 模型评估
 
 ``` shell
-export CUDA_VISIBLE_DEVICES=0,1,2,3
-python -m paddle.distributed.launch --gpus="0,1,2,3" \
-    eval.py \
+python eval.py \
     --model convnext_tiny \
     --batch_size 128 \
     --data_path /path/to/imagenet/ \
