@@ -28,7 +28,7 @@ def get_args_parser():
                         help='dataset path')
     parser.add_argument('--nb_classes', default=1000, type=int,
                         help='number of the classification types')
-    parser.add_argument('--cls_label_path', default=None, type=str,
+    parser.add_argument('--cls_label_path_val', default=None, type=str,
                         help='dataset label path')
     parser.add_argument('--train_interpolation', type=str, default='bicubic',
                         help='Training interpolation (random, bilinear, bicubic default: "bicubic")')
