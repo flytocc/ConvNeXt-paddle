@@ -119,8 +119,13 @@ python -m paddle.distributed.launch --gpus="0,1,2,3" \
     --warmup_epochs 20 \
     --model_ema --model_ema_eval --dist_eval \
     --data_path /path/to/imagenet/ \
+    --cls_label_path_train /path/to/train_list.txt \
+    --cls_label_path_val /path/to/val_list.txt \
     --output_dir output/convnext_tiny
 ```
+
+ps: 如果未指定`cls_label_path_train`/`cls_label_path_val`，会读取`data_path`下train/val里的图片作为train-set/val-set。
+
 
 部分训练日志如下所示。
 
@@ -136,8 +141,11 @@ python eval.py \
     --model convnext_tiny \
     --batch_size 128 \
     --data_path /path/to/imagenet/ \
+    --cls_label_path_val /path/to/val_list.txt \
     --resume $TRAINED_MODEL
 ```
+
+ps: 如果未指定`cls_label_path_val`，会读取`data_path`/val里的图片作为val-set。
 
 ### 4.3 模型预测
 
