@@ -174,7 +174,7 @@ python export_model.py \
     --output_dir /path/to/save/export_model/ \
     --resume $TRAINED_MODEL
 
-python inference.py \
+python infer.py \
     --model_file /path/to/save/export_model/output/model.pdmodel \
     --params_file /path/to/save/export_model/output/model.pdiparams \
     --input_file ./demo/ILSVRC2012_val_00020010.JPEG
@@ -190,14 +190,14 @@ python inference.py \
 ## 5. 代码结构
 
 ```
-├── models.py
 ├── demo
 ├── engine.py
 ├── eval.py
 ├── export_model.py
-├── inference.py
-├── predict.py
+├── infer.py
 ├── main.py
+├── models.py
+├── predict.py
 ├── README.md
 ├── requirements.txt
 ├── test_tipc
@@ -234,7 +234,7 @@ TIPC结果：
 Run successfully with command - python3.7 main.py --model=convnext_tiny --data_path=./dataset/ILSVRC2012/ --cls_label_path_train=./dataset/ILSVRC2012/train_list.txt --cls_label_path_val=./dataset/ILSVRC2012/val_list.txt --dist_eval    --output_dir=./test_tipc/output/norm_train_gpus_0_autocast_null/convnext_tiny --epochs=2     --batch_size=8 !
 Run successfully with command - python3.7 eval.py --model=convnext_tiny --data_path=./dataset/ILSVRC2012/ --cls_label_path_val=./dataset/ILSVRC2012/val_list.txt --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/convnext_tiny/checkpoint-latest.pd !
 Run successfully with command - python3.7 export_model.py --model=convnext_tiny --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/convnext_tiny/checkpoint-latest.pd --output=./test_tipc/output/norm_train_gpus_0_autocast_null !
-Run successfully with command - python3.7 inference.py --use_gpu=True --use_tensorrt=False --precision=fp32 --model_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdmodel --batch_size=1 --input_file=./dataset/ILSVRC2012/val  --params_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdiparams > ./test_tipc/output/python_infer_gpu_usetrt_False_precision_fp32_batchsize_1.log 2>&1 !
+Run successfully with command - python3.7 infer.py --use_gpu=True --use_tensorrt=False --precision=fp32 --model_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdmodel --batch_size=1 --input_file=./dataset/ILSVRC2012/val  --params_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdiparams > ./test_tipc/output/python_infer_gpu_usetrt_False_precision_fp32_batchsize_1.log 2>&1 !
 ......
 ```
 

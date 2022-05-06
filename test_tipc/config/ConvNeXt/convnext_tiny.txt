@@ -37,7 +37,7 @@ inference_dir:null
 infer_model:null
 infer_export:null
 infer_quant:False
-inference:inference.py
+inference:infer.py
 --use_gpu:True
 --enable_mkldnn:True|False
 --cpu_threads:1|2
