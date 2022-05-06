@@ -150,7 +150,7 @@ ps: 如果未指定`cls_label_path_val`，会读取`data_path`/val里的图片�
 ### 4.3 模型预测
 
 ```shell
-python infer.py \
+python predict.py \
     --model convnext_tiny \
     --infer_imgs ./demo/ILSVRC2012_val_00020010.JPEG \
     --resume $TRAINED_MODEL
@@ -184,7 +184,7 @@ python inference.py \
 ```
 [{'class_ids': [178, 211, 85, 236, 246], 'scores': [0.876124918460846, 0.0005408982397057116, 0.0005338677437976003, 0.0004670215421356261, 0.0004502409719862044], 'file_name': './demo/ILSVRC2012_val_00020010.JPEG', 'label_names': ['Weimaraner', 'vizsla, Hungarian pointer', 'quail', 'Doberman, Doberman pinscher', 'Great Dane']}]
 ```
-表示预测的类别为`Weimaraner（魏玛猎狗）`，ID是`178`，置信度为`0.876124918460846`。与infer.py结果的误差在正常范围内。
+表示预测的类别为`Weimaraner（魏玛猎狗）`，ID是`178`，置信度为`0.876124918460846`。与predict.py结果的误差在正常范围内。
 
 
 ## 5. 代码结构
@@ -196,7 +196,7 @@ python inference.py \
 ├── eval.py
 ├── export_model.py
 ├── inference.py
-├── infer.py
+├── predict.py
 ├── main.py
 ├── README.md
 ├── requirements.txt
