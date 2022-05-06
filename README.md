@@ -162,18 +162,30 @@ python infer.py \
 
 最终输出结果为
 ```
-[{'class_ids': [178, 211, 85, 236, 246], 'scores': [0.8709730505943298, 0.000631204224191606, 0.0005504980799742043, 0.000490587844979018, 0.0004885641392320395], 'file_name': './demo/ILSVRC2012_val_00020010.JPEG', 'label_names': ['Weimaraner', 'vizsla, Hungarian pointer', 'quail', 'Doberman, Doberman pinscher', 'Great Dane']}]
+[{'class_ids': [178, 211, 85, 236, 246], 'scores': [0.8764122724533081, 0.0005400953232310712, 0.00053271499928087, 0.00046646789996884763, 0.0004493726301006973], 'file_name': './demo/ILSVRC2012_val_00020010.JPEG', 'label_names': ['Weimaraner', 'vizsla, Hungarian pointer', 'quail', 'Doberman, Doberman pinscher', 'Great Dane']}]
 ```
-表示预测的类别为`Weimaraner（魏玛猎狗）`，ID是`178`，置信度为`0.8709730505943298`。
+表示预测的类别为`Weimaraner（魏玛猎狗）`，ID是`178`，置信度为`0.8764122724533081`。
 
 ### 4.4 模型导出
 
 ```shell
 python export_model.py \
     --model convnext_tiny \
-    --output_dir ./output/ \
+    --output_dir /path/to/save/export_model/ \
     --resume $TRAINED_MODEL
+
+python inference.py \
+    --model_file /path/to/save/export_model/output/model.pdmodel \
+    --params_file /path/to/save/export_model/output/model.pdiparams \
+    --input_file ./demo/ILSVRC2012_val_00020010.JPEG
 ```
+
+输出结果为
+```
+[{'class_ids': [178, 211, 85, 236, 246], 'scores': [0.876124918460846, 0.0005408982397057116, 0.0005338677437976003, 0.0004670215421356261, 0.0004502409719862044], 'file_name': './demo/ILSVRC2012_val_00020010.JPEG', 'label_names': ['Weimaraner', 'vizsla, Hungarian pointer', 'quail', 'Doberman, Doberman pinscher', 'Great Dane']}]
+```
+表示预测的类别为`Weimaraner（魏玛猎狗）`，ID是`178`，置信度为`0.876124918460846`。与infer.py结果的误差在正常范围内。
+
 
 ## 5. 代码结构
 

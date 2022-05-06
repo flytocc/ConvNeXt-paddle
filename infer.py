@@ -51,7 +51,7 @@ def main(args):
     if isinstance(args.infer_imgs, str):
         infer_imgs = [args.infer_imgs]
 
-    images = [Image.open(img).convert('RGB') for img in  infer_imgs]
+    images = [Image.open(img).convert('RGB') for img in infer_imgs]
     images = paddle.stack([preprocess(img) for img in images], axis=0)
 
     # compute output
