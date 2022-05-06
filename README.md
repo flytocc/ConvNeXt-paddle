@@ -235,7 +235,7 @@ Run successfully with command - python3.7 main.py --model=convnext_tiny --data_p
 Run successfully with command - python3.7 eval.py --model=convnext_tiny --data_path=./dataset/ILSVRC2012/ --cls_label_path_val=./dataset/ILSVRC2012/val_list.txt --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/convnext_tiny/checkpoint-latest.pd !
 Run successfully with command - python3.7 export_model.py --model=convnext_tiny --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/convnext_tiny/checkpoint-latest.pd --output=./test_tipc/output/norm_train_gpus_0_autocast_null !
 Run successfully with command - python3.7 inference.py --use_gpu=True --use_tensorrt=False --precision=fp32 --model_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdmodel --batch_size=1 --input_file=./dataset/ILSVRC2012/val  --params_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdiparams > ./test_tipc/output/python_infer_gpu_usetrt_False_precision_fp32_batchsize_1.log 2>&1 !
-...
+......
 ```
 
 * 更多详细内容，请参考：[TIPC测试文档](./test_tipc/README.md)。
