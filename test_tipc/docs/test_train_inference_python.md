@@ -15,7 +15,7 @@ Linux端基础训练预测功能测试的主程序为`test_train_inference_pytho
 
 | 算法名称 | 模型名称 | device_CPU | device_GPU | batchsize |
 |  :----:   |  :----: |   :----:   |  :----:  |   :----:   |
-|  MobileNetV3   |  mobilenet_v3_small |  支持 | 支持 | 1 |
+|  ConvNeXt   |  convnext_tiny |  支持 | 支持 | 1 |
 
 
 ## 2. 测试流程
