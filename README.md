@@ -30,7 +30,7 @@ class="center">
 
 **参考repo:** [ConvNeXt](https://github.com/facebookresearch/ConvNeXt)
 
-在此非常感谢`HannaMao`贡献的[ConvNeXt](https://github.com/facebookresearch/ConvNeXt)，提高了本repo复现论文的效率。
+在此非常感谢`s9xie`、`HannaMao`和`liuzhuang13`等人贡献的[ConvNeXt](https://github.com/facebookresearch/ConvNeXt)，提高了本repo复现论文的效率。
 
 
 ## 2. 数据集和复现精度
@@ -248,3 +248,14 @@ This project is released under the MIT license.
 ## 8. 参考链接与文献
 1. A ConvNet for the 2020s: https://arxiv.org/abs/2201.03545
 2. ConvNeXt: https://github.com/facebookresearch/ConvNeXt
+
+再次感谢`s9xie`、`HannaMao`和`liuzhuang13`等人贡献的[ConvNeXt](https://github.com/facebookresearch/ConvNeXt)，提高了本repo复现论文的效率。
+
+```
+@Article{liu2022convnet,
+  author  = {Zhuang Liu and Hanzi Mao and Chao-Yuan Wu and Christoph Feichtenhofer and Trevor Darrell and Saining Xie},
+  title   = {A ConvNet for the 2020s},
+  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year    = {2022},
+}
+```
